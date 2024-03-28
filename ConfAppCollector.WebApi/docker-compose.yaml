@@ -1,17 +1,26 @@
 version: "3.9"
 services:
-  postgres:
-    container_name: postgres
+  ConfAppCollector.WebApi:
+    image: ${DOCKER_REGISTRY-}onionarchitectureweb
+    container_name: ConfAppCollector.WebApi
+    build:
+      context: .
+      dockerfile: ConfAppCollector.WebApi/Dockerfile
+    ports:
+      - 5000:80
+      - 5001:443
+    depends_on:
+      - ConfAppCollector.db
+
+  ConfAppCollector.db:
+    container_name: ConfAppCollector.db
     image: postgres:latest
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: ConfAppDb
+      - POSTGRES_DB=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
     volumes:
-    - postgres-data:/var/lib/postgresql/data
+    - ./db:/var/lib/postgresql/data
     ports:
-      - "5433:5432" 
+      - "5432:5432" 
 
-volumes:
-  postgres-data:
-  

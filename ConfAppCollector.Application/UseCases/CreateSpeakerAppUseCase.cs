@@ -1,11 +1,6 @@
 ﻿using ConfAppCollector.Application.Interfaces;
 using ConfAppCollector.Domain.Entities;
 using ConfAppCollector.Infrastructure.Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConfAppCollector.Application.UseCases
 {

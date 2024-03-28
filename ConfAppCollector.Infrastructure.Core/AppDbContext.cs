@@ -20,19 +20,20 @@ namespace ConfAppCollector.Infrastructure.Core
             base.OnModelCreating(modelBuilder);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                string conn = "Host=localhost;Port=5432;Database=ConfAppDb;Username=admin;Password=132456";
-                optionsBuilder.UseNpgsql(conn, sql => sql.MigrationsAssembly("ConfAppCollector.Infrastructure.Core"));
-            }
-            base.OnConfiguring(optionsBuilder);
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        string conn = "Host=localhost;Port=5432;Database=db;Username=admin;Password=123";
+        //        optionsBuilder.UseNpgsql(conn, sql => sql.MigrationsAssembly("ConfAppCollector.Infrastructure.Core"));
+        //    }
+        //    base.OnConfiguring(optionsBuilder);
 
-        }
+        //}
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        { 
+        {
+            //Database.Migrate();
         }
     }
 }

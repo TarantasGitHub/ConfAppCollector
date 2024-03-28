@@ -16,7 +16,7 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<AppDbContext>(
     options =>
     {
-        options.UseNpgsql(configuration.GetConnectionString(nameof(AppDbContext)));
+        options.UseNpgsql(configuration.GetConnectionString("AppDb"));
     }
 );
 builder.Services.AddScoped<ISpeakerRepository, SpeakerRepository>();
