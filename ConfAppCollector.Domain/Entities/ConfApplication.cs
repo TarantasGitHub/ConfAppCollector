@@ -10,15 +10,12 @@ namespace ConfAppCollector.Domain.Entities
 {
     public class ConfApplication
     {
-        [Key]
-        public Guid Id { get; set; }
-
-        [ForeignKey("Author")]
+        public Guid Id { get; set; }        
         public Guid Author { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Outline { get; set; }
-        public Speaker AuthorApp { get; set; }
+        public Speaker? Speaker { get; set; }
 
     }
 }

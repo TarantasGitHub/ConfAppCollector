@@ -18,8 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfAppCollector.Applicatio
 		{9A760281-B3A6-465E-AF9F-C3A9F116F5E7} = {9A760281-B3A6-465E-AF9F-C3A9F116F5E7}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfAppCollector.WebAPI", "ConfAppCollector.WebAPI\ConfAppCollector.WebAPI.csproj", "{12A1E41B-471D-47DF-A90F-BAA74EF0C97A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfAppCollector.WebApi", "ConfAppCollector.WebApi\ConfAppCollector.WebApi.csproj", "{E2C8B312-C151-4269-9335-B64F522B10DB}"
 	ProjectSection(ProjectDependencies) = postProject
+		{42EB9D47-8381-40B3-A856-ACF500DB83A0} = {42EB9D47-8381-40B3-A856-ACF500DB83A0}
 		{F208A98A-2686-4C61-BC7B-AFD35CAA74A0} = {F208A98A-2686-4C61-BC7B-AFD35CAA74A0}
 	EndProjectSection
 EndProject
@@ -41,10 +42,10 @@ Global
 		{F208A98A-2686-4C61-BC7B-AFD35CAA74A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F208A98A-2686-4C61-BC7B-AFD35CAA74A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F208A98A-2686-4C61-BC7B-AFD35CAA74A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12A1E41B-471D-47DF-A90F-BAA74EF0C97A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12A1E41B-471D-47DF-A90F-BAA74EF0C97A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12A1E41B-471D-47DF-A90F-BAA74EF0C97A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12A1E41B-471D-47DF-A90F-BAA74EF0C97A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C8B312-C151-4269-9335-B64F522B10DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C8B312-C151-4269-9335-B64F522B10DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C8B312-C151-4269-9335-B64F522B10DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C8B312-C151-4269-9335-B64F522B10DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

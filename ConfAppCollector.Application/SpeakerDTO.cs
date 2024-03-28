@@ -8,8 +8,6 @@ namespace ConfAppCollector.Application
 {
     public class SpeakerDTO
     {
-        public Guid Id { get; set; }
-
         public Guid Author { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

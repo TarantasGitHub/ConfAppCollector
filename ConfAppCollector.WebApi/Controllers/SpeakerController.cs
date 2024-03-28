@@ -2,14 +2,16 @@
 using ConfAppCollector.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ConfAppCollector.WebAPI.Controllers
+namespace ConfAppCollector.WebApi.Controllers
 {
     [ApiController]
-    public class AuthorController : Controller
-    {
-        private readonly ICreateAutorAppUseCase createAutorAppUseCase;
+    [Route("api/speakers")]
 
-        public AuthorController(ICreateAutorAppUseCase createAutorAppUseCase)
+    public class SpeakerController : Controller
+    {
+        private readonly ICreateSpeakerAppUseCase createAutorAppUseCase;
+
+        public SpeakerController(ICreateSpeakerAppUseCase createAutorAppUseCase)
         {
             this.createAutorAppUseCase = createAutorAppUseCase;
         }

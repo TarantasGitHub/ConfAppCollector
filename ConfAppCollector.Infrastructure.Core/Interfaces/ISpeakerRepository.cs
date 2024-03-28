@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConfAppCollector.Infrastructure.Core.Interfaces
 {
-    public interface IAuthorRepository : IRepository<Speaker>
+    public interface ISpeakerRepository : IRepository<Speaker>
     {
     }
 }

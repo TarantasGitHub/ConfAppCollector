@@ -1,6 +1,6 @@
-@ConfAppCollector.WebAPI_HostAddress = http://localhost:5189
+@ConfAppCollector.WebApi_HostAddress = http://localhost:5125
 
-GET {{ConfAppCollector.WebAPI_HostAddress}}/weatherforecast/
+GET {{ConfAppCollector.WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
