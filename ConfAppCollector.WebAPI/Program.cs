@@ -14,17 +14,13 @@ builder.Services.AddControllers();
 
 var configuration = builder.Configuration;
 builder.Services.AddDbContext<AppDbContext>(
-    options =>
-    {
-        options.UseNpgsql(configuration.GetConnectionString("AppDb"));
-    }
-);
+    options => options.UseNpgsql(configuration.GetConnectionString("AppDb")));
+
 builder.Services.AddScoped<ISpeakerRepository, SpeakerRepository>();
 builder.Services.AddScoped<ICreateSpeakerAppUseCase, CreateSpeakerAppUseCase>();
 
+
 builder.Services.AddSwaggerGen();
-
-
 
 
 var app = builder.Build();

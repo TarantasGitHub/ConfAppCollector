@@ -11,27 +11,28 @@ namespace ConfAppCollector.WebApi.Controllers
     public class SpeakerController : Controller
     {
         private readonly ICreateSpeakerAppUseCase createAutorAppUseCase;
-        private readonly IEditConfApplicationUseCase editConfAppUseCase;
+        //private readonly IEditConfApplicationUseCase editConfAppUseCase;
 
         public SpeakerController(
-            ICreateSpeakerAppUseCase createAutorAppUseCase,
-            IEditConfApplicationUseCase editConfAppUseCase
+            ICreateSpeakerAppUseCase createAutorAppUseCase
+            //IEditConfApplicationUseCase editConfAppUseCase
             )
         {
             this.createAutorAppUseCase = createAutorAppUseCase;
-            this.editConfAppUseCase = editConfAppUseCase;
+            //this.editConfAppUseCase = editConfAppUseCase;
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateAutor(SpeakerDTO authorDTO)
         {
-            return Ok(await createAutorAppUseCase.ExecuteAsync(authorDTO, HttpContext.RequestAborted));
+            var rezult = await createAutorAppUseCase.ExecuteAsync(authorDTO, HttpContext.RequestAborted);
+            return Ok(rezult);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> EditApplication(SpeakerDTO authorDTO)
-        {
-            return Ok(await editConfAppUseCase.ExecuteAsync(authorDTO, HttpContext.RequestAborted));
-        }
+        //[HttpPut]
+        //public async Task<IActionResult> EditApplication(SpeakerDTO authorDTO)
+        //{
+        //    return Ok(await editConfAppUseCase.ExecuteAsync(authorDTO, HttpContext.RequestAborted));
+        //}
     }
 }

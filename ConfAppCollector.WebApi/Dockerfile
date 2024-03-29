@@ -10,9 +10,6 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["ConfAppCollector.WebApi/ConfAppCollector.WebApi.csproj", "ConfAppCollector.WebApi/"]
-COPY ["ConfAppCollector.Infrastructure.Core/ConfAppCollector.Infrastructure.Core.csproj", "ConfAppCollector.Infrastructure.Core/"]
-COPY ["ConfAppCollector.Domain/ConfAppCollector.Domain.csproj", "ConfAppCollector.Domain/"]
-COPY ["ConfAppCollector.Application/ConfAppCollector.Application.csproj", "ConfAppCollector.Application/"]
 RUN dotnet restore "./ConfAppCollector.WebApi/./ConfAppCollector.WebApi.csproj"
 COPY . .
 WORKDIR "/src/ConfAppCollector.WebApi"
