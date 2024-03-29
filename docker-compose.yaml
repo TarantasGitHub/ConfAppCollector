@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: ConfAppCollector.WebApi/Dockerfile
     ports:
-      - "80:80" 
+      - "8000:80" 
     networks:
     - conf-collector
     depends_on:
