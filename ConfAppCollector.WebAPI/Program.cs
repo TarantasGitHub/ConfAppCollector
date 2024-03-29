@@ -14,7 +14,9 @@ builder.Services.AddControllers();
 
 var configuration = builder.Configuration;
 builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseNpgsql(configuration.GetConnectionString("AppDb")));
+    options => options.UseNpgsql(configuration.GetConnectionString("AppDb"), 
+    x => x.MigrationsAssembly("ConfAppCollector.Infrastructure.Core")));
+
 
 builder.Services.AddScoped<ISpeakerRepository, SpeakerRepository>();
 builder.Services.AddScoped<ICreateSpeakerAppUseCase, CreateSpeakerAppUseCase>();

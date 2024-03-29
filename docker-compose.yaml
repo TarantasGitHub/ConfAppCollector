@@ -1,6 +1,6 @@
 version: "3.9"
 networks:
-   conf-collector:
+  conf-collector:
     driver: bridge
 services:
   collector.api:
