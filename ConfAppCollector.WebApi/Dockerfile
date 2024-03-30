@@ -8,9 +8,14 @@ EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
+
 WORKDIR /src
+COPY ["ConfAppCollector.Application/ConfAppCollector.Application.csproj", "ConfAppCollector.Application/"]
+COPY ["ConfAppCollector.Domain/ConfAppCollector.Domain.csproj", "ConfAppCollector.Domain/"]
+COPY ["ConfAppCollector.Infrastructure.Core/ConfAppCollector.Infrastructure.Core.csproj", "ConfAppCollector.Infrastructure.Core/"]
 COPY ["ConfAppCollector.WebApi/ConfAppCollector.WebApi.csproj", "ConfAppCollector.WebApi/"]
-RUN dotnet restore "./ConfAppCollector.WebApi/./ConfAppCollector.WebApi.csproj"
+RUN dotnet restore "ConfAppCollector.WebApi/ConfAppCollector.WebApi.csproj"
+
 COPY . .
 WORKDIR "/src/ConfAppCollector.WebApi"
 RUN dotnet build "./ConfAppCollector.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
