@@ -24,6 +24,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfAppCollector.WebApi", "
 		{F208A98A-2686-4C61-BC7B-AFD35CAA74A0} = {F208A98A-2686-4C61-BC7B-AFD35CAA74A0}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{90D4B309-3BFD-4FCB-9A5F-E07A4DFA90BE}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
