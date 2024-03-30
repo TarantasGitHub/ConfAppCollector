@@ -21,6 +21,11 @@ namespace ConfAppCollector.WebApi.Controllers
             this.createAutorAppUseCase = createAutorAppUseCase;
             //this.editConfAppUseCase = editConfAppUseCase;
         }
+        [HttpGet]
+        public IActionResult TestAction()
+        {            
+            return Ok("Ответ отправлен успешно...");
+        }
 
         [HttpPost]
         public async Task<IActionResult> CreateAutor(SpeakerDTO authorDTO)
